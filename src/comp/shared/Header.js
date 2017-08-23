@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import '../../styles/nav.sass'
 
+
 class Header extends Component {
   constructor(props) {
     super(props);
