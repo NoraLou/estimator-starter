@@ -9,7 +9,7 @@ class Header extends React.Component {
   render () {
     return (
       <header>
-        <Navbar fixed="true">
+        <Navbar>
           <UncontrolledDropdown>
             <DropdownToggle caret>
               Dropdown
