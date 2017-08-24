@@ -10,13 +10,7 @@ class Header extends React.Component {
     return (
       <header>
         <Navbar>
-          <UncontrolledDropdown>
-            <DropdownToggle caret>
-              Dropdown
-            </DropdownToggle>
-            <DropdownMenu>
-            </DropdownMenu>
-          </UncontrolledDropdown>
+   
         </Navbar>
         <SideBar />
         {this.props.children}
