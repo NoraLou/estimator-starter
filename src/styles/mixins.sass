@@ -1,0 +1,116 @@
+// ========================
+// Font Face
+// ========================
+=font-face($font-family, $file-name, $font-weight: normal, $font-style: normal)
+  @font-face
+    font-family: $font-family
+    // src: url("#{$globalAssets}/fonts/#{$file-name}.ttf") format('truetype')
+    src: url("#{$globalAssets}/fonts/#{$file-name}.otf") format('opentype')
+    font-weight: $font-weight
+    font-style: $font-style
+
+=SourceSans($font-weight: normal, $font-style: normal)
+  font-family: 'Source Sans Pro', sans-serif
+  font-weight: $font-weight
+  font-style: $font-style
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+// ========================
+// Media Quary
+// ========================
+=media($media)
+  // If the size is up
+  @if ($media == "on-xs")
+     @media(min-width: 0px) and (max-width: 575px)
+      @content
+
+  @if ($media == "on-sm")
+     @media(min-width: 576px) and (max-width: 767px)
+      @content
+
+  @if ($media == "on-md")
+     @media(min-width: 768px) and (max-width: 991px)
+      @content
+
+  @if ($media == "on-lg")
+     @media(min-width: 992px) and (max-width: 1199px)
+      @content
+
+  @if ($media == "on-xl")
+     @media(min-width: 1200px) and (max-width: 1399px)
+      @content
+
+  // If the size is up
+  @if ($media == "on-xs-up")
+     @media(min-width: 0px)
+      @content
+
+  @if ($media == "on-sm-up")
+     @media(min-width: 576px)
+      @content
+
+  @if ($media == "on-md-up")
+     @media(min-width: 768px)
+      @content
+
+  @if ($media == "on-lg-up")
+     @media(min-width: 992px)
+      @content
+
+  @if ($media == "on-xl-up")
+     @media(min-width: 1200px)
+      @content
+
+  // If the size is Down
+  @if ($media == "on-xs-down")
+     @media(max-width: 577px)
+      @content
+
+  @if ($media == "on-sm-down")
+     @media(max-width: 767px)
+      @content
+
+  @if ($media == "on-md-down")
+     @media(max-width: 991px)
+      @content
+
+  @if ($media == "on-lg-down")
+     @media(max-width: 1199px)
+      @content
+
+  @if ($media == "on-xl-down")
+     @media(max-width: 1399px)
+      @content
+
+// ========================
+// Background Image
+// ========================
+=bgImg($imgName:null, $extension:jpg, $bg-pos:center, $bg-size:cover)
+  @if $imgName != null or $imgName != ""
+    @if $extension == png or $extension == "png"
+      background: url("#{$globalAssets}/images/#{$imgName}.png") no-repeat
+    @else if $extension == svg or $extension == "svg"
+      background: url("#{$globalAssets}/images/#{$imgName}.svg") no-repeat
+    @else if $extension == gif or $extension == "gif"
+      background: url("#{$globalAssets}/images/#{$imgName}.gif") no-repeat
+    @else
+      background: url("#{$globalAssets}/images/#{$imgName}.jpg") no-repeat
+
+  @if $bg-pos != null or $imgName != ""
+    background-position: $bg-pos
+
+  @if $bg-size != null or $imgName != ""
+    background-size: $bg-size
+
+// ========================
+// Background Gradient
+// ========================
+=bgGradient($colorFrom, $colorTo, $percentFrom:0, $percentTo:100)
+  background: -webkit-gradient(linear, 0 $percentFrom+%, 0 $percentTo+%, from($colorFrom), to($colorTo))
+  background: -webkit-linear-gradient($colorFrom $percentFrom+%, $colorTo $percentTo+%)
+  background: -moz-linear-gradient($colorFrom $percentFrom+%, $colorTo $percentTo+%)
+  background: -o-linear-gradient($colorFrom $percentFrom+%, $colorTo $percentTo+%)
+  background: linear-gradient($colorFrom $percentFrom+%, $colorTo $percentTo+%)
+
+

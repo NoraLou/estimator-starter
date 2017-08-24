@@ -1,2 +1,39 @@
+// ==============================
+// Asset Variable
+// ==============================
+
+
+// ==============================
+// Spacing Variable
+// ==============================
+$globalSpacing: 30px
+
+// ==============================
+// Color Variable
+// ==============================
+$white: #fff
+$whiteSemiTransparent: rgba(255,255,255,.95)
+$gray1: #E5E5E5
+$gray2: #CACACA
+$gray3: #AEAEAE
+$gray4: #909090
+$gray5: #706F6F
+$gray6: #D8D8D8
+$gray7: #404041
+$black: #000000
+
 body
-  background: lightcyan
+  +SourceSans()
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  background: $white
+  font-size: rem(16px)
+  line-height: 1.4em
+  letter-spacing: 1px
+  -webkit-overflow-scrolling: touch
+  color: $black
+  overflow-x: hidden
+
+
+#app
+  margin: 0 auto
