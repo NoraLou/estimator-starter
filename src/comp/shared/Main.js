@@ -1,17 +1,23 @@
-Main.jsimport React, { Component } from 'react';
+import React from 'react'
+import { Switch, Route } from 'react-router-dom'
+import Home from './Home'
 
-class Example extends Component {
-  //add props if you need it. 
 
-  render() {
-    return (
-      <div>
-        <p>
-         Do it like this to start
-        </p>
-      </div>
-    );
-  }
-}
+
+const Main = () => (
+  <main className="container">
+    <Switch>
+      <Route exact path='/' component={Home}/>
+    </Switch>
+  </main>
+)
 
 export default Main
+
+
+  
+
+
+
+
+
