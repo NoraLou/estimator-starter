@@ -6,6 +6,61 @@ nav
     color: $black
     background: $white
 
+
+
+  .dropdown-container
+    color: $black
+    background: $white
+    width: 250px
+    margin-top: 20px
+    // border: 1px solid black
+    .dropdown-display
+      width: 100%
+      border: solid 1px #dddddd
+      padding: 15px
+
+    .dropdown-list
+      background: $white
+      float: left
+      width: 100% 
+      position: relative 
+      transform: scale(1, 0)
+      transition: -webkit-transform ease 250ms
+      transition: transform ease 250ms
+
+      .list-container
+        position: absolute
+        width: 100%
+
+        .list-item
+          background: white
+          z-index: 2
+          color: darkgrey
+          width: 100%
+          border: solid 1px #dddddd
+          padding: 15px
+          &:hover
+            background: gainsboro
+            color: black
+
+
+    &.show
+      background: blue
+      .dropdown-list
+        transform: scale(1, 1)
+        float: left
+        width: 100%
+
+
+
+
+
+
+
+
+
+    
+
 .bm-burger-button
   position: fixed
   width: 36px
